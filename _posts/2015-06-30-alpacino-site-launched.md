@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Alpacino, Launches Site"
 date: 2015-06-30
 ---
