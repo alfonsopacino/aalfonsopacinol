@@ -5,21 +5,21 @@ layout: feed
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Alpacino's Blog</title>
-	<link href="http://alfonsopacino.github.io/blog/atom.xml" rel="self"/>
-	<link href="http://alfonsopacino.github.io/blog"/>
+	<link href="http://complaintcoach.github.io/blog/atom.xml" rel="self"/>
+	<link href="http://complaintcoach.github.io/blog"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://alfonsopacino.github.io/blog</id>
+	<id>http://complaintcoach.github.io/blog</id>
 	<author>
-		<name>Alfonso Pacino</name>
-		<email>beckyjaimes@gmail.com</email>
+		<name>Complaint Coach</name>
+		<email>mom@complaintcoach.com</email>
 	</author>
 
 	{% for post in site.posts %}
 		<entry>
 			<title>{{ post.title }}</title>
-			<link href="http://alfonsopacino.github.io{{ post.url }}"/>
+			<link href="http://complaintcoach.github.io{{ post.url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>http://alfonsopacino.github.io/{{ post.id }}</id>
+			<id>http://complaintcoach.github.io/{{ post.id }}</id>
 			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}
