@@ -58,7 +58,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
-	margin: 60px auto;
+	margin: 0;
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
@@ -80,7 +80,7 @@ html{
 body {
 	background: #fff;
 	font-family:Libre Baskerville;
-	font-size:.625em;
+	font-size:1.5em;
 	letter-spacing:1px;
 }
 #wrapper{
