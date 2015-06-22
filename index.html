@@ -34,7 +34,7 @@ function identify(e){
     var user = {email: email, name: penname, complain: complain};
     analytics.identify(email, {email: email, name: penname});
     analytics.track('complaint', user, function() {
-        window.location.href = "http://www.complaintcoach.com/?page_id=16";
+        window.location.href = "/_pages/gotit";
     });
   }
 </script>
