@@ -4,7 +4,6 @@ title: Complaint Coach
 ---
 <h2>Got it.</h2>
 <p>
-<label style="color: grey; margin-left: 15px; font-size: 2em;"></label>
 Stay tuned for advice. In the meantime, if
 something changes send any update to
 your coach at: mom@complaintcoach.com
