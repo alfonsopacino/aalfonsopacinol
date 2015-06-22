@@ -28,6 +28,7 @@ function identify(e){
     var complain = form["complain"].value;
     var user = {email: email, name: penname, complain: complain};
     analytics.identify(email, {email: email, name: penname});
+    analytics.page('Home', {})
     analytics.track('complaint', user, function() {
         window.location.href = "/gotit";
     });
