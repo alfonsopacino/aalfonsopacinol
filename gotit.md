@@ -14,5 +14,5 @@ your coach at: mom@complaintcoach.com
       }}();
 </script>
 <script>
-    analytics.page('home', {});
+    analytics.page('gotit', {});
 </script>
