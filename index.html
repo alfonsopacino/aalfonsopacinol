@@ -3,7 +3,38 @@ layout: default
 title: Al Pacino, the best dog
 ---
 <div class="blurb">
-	<h1>Hi there, I'm Al Pacino!</h1>
-	<p>I'm best known as Andrew's life partner. I love him so very much. <a href="https://lh3.googleusercontent.com/-px8dzHosweU/VYcx111MPTI/AAAAAAAAKQQ/apEnWyHtPu0/s640/alpacino.jpg">Look how beautiful we are...</a></p>
-	
-	</div><!-- /.blurb -->
+	<!--<h1>Hi there, I'm Al Pacino!</h1>-->
+	<!--<p>I'm best known as Andrew's life partner. I love him so very much. <a href="https://lh3.googleusercontent.com/-px8dzHosweU/VYcx111MPTI/AAAAAAAAKQQ/apEnWyHtPu0/s640/alpacino.jpg">Look how beautiful we are...</a></p>-->
+
+<h1>Are you getting everything you could out of your complaints?</h1>
+<p>
+<form name="complaint" onsubmit="identify(event)">
+Name:
+<input name="penname" required="" size="50" type="text" value="" />
+<br>
+Email:
+<input name="email" required="" size="50" type="email" value="" />
+<br>
+Tell me, what seems to be the problem?
+<textarea cols="50" name="complain" required="" rows="30"></textarea>
+<br>
+<input name="submit" type="submit" value="submit" />
+</form>
+<script type="text/javascript">
+function identify(e){
+    e.preventDefault();
+    var form = e.target;
+    var email = form["email"].value;
+    var penname = form["penname"].value;
+    var complain = form["complain"].value;
+    var user = {email: email, name: penname, complain: complain};
+    analytics.identify(email, {email: email, name: penname});
+    analytics.track('complaint', user, function() {
+        window.location.href = "http://www.complaintcoach.com/?page_id=16";
+    });
+  }
+</script>
+-A Safe Place to Complain-
+</p>
+
+</div><!-- /.blurb -->
