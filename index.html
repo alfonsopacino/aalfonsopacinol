@@ -5,35 +5,11 @@ title: Complaint Coach
 <div class="blurb">
 <h2>Complaint Coach</h2>
 <p>
-<form name="complaint" onsubmit="identify(event)">
-<label style="color: grey; margin-left: 15px; font-size: 2em;"></label>
-Tell me, what seems to be the problem?
-<br><br>
-<textarea cols="100" name="complain" required="" rows="30"></textarea>
-<br><br>
-Name:
-<input name="penname" required="" size="75" type="text" value="" style="color: grey; "/>
-<br><br>
-Email:
-<input name="email" required="" size="75" type="email" value="" style="color: grey;"/>
-<br><br>
-<input name="submit" type="submit" value="submit" style="background-color: #555555; color: #fff; margin-left: 15px; "/>
-</form>
-<script type="text/javascript">
-function identify(e){
-    e.preventDefault();
-    var form = e.target;
-    var email = form["email"].value;
-    var penname = form["penname"].value;
-    var complain = form["complain"].value;
-    var user = {email: email, name: penname, complain: complain};
-    analytics.identify(email, {email: email, name: penname});
-    analytics.page('Home', {})
-    analytics.track('complaint', user, function() {
-        window.location.href = "/gotit";
-    });
-  }
-</script>
+    {% include complaintform.html %}
+    
+    <script type="text/javascript">
+    analytics.page('Home', {});
+    </script>
 <br><br>
 </p>
 
